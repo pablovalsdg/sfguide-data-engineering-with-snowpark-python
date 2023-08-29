@@ -58,13 +58,9 @@ def get_snowsql_config(
 
     snowsql_to_snowpark_config_mapping = {
         'account': 'account',
-        'accountname': 'account',
-        'username': 'user',
-        'password': 'password',
-        'rolename': 'role',
-        'warehousename': 'warehouse',
-        'dbname': 'database',
-        'schemaname': 'schema'
+        'accountname': 'rztrktr-rg91640',
+        'username': 'PVMSDG',
+        'password': 'Pruebasnowsql_1'
     }
     try:
         config = configparser.ConfigParser(inline_comment_prefixes="#")

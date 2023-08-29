@@ -72,10 +72,17 @@ if __name__ == "__main__":
     parent_dir = os.path.dirname(current_dir)
     sys.path.append(parent_dir)
 
-    from utils import snowpark_utils
-    session = snowpark_utils.get_snowpark_session()
-
-    load_all_raw_tables(session)
+    connection_parameters = {
+...    "account": "rztrktr-rg91640",
+...    "user": "PVMSDG",
+...    "password": "Pruebasnowsql_1
+...    #"role": "<your snowflake role>",  # optional
+...    #"warehouse": "<your snowflake warehouse>",  # optional
+...    #"database": "<your snowflake database>",  # optional
+...    #"schema": "<your snowflake schema>",  # optional
+...  }  
+>>> new_session = Session.builder.configs(connection_parameters).create()
+    load_all_raw_tables(new_session)
 #    validate_raw_tables(session)
 
-    session.close()
+    new_session.close()
